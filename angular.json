@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "noteitapp"
+    }
+  },
+  "defaultProject": "noteitapp",
+  "cli": {
+    "analytics": "41f3d79a-7dbb-494e-9ca2-7f3f4d156fd2"
+  }
 }
