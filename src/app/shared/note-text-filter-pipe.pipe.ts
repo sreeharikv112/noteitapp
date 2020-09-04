@@ -10,7 +10,6 @@ export class NoteTextFilterPipePipe implements PipeTransform {
     if(text == null || text ===""){
       return notes;
     }
-    return notes.filter( n => n.noteTitle.includes(text) || n.noteDetails.includes(text));
+    return notes.filter( n => n.noteTitle.toLowerCase().includes(text.toLowerCase()) || n.noteDetails.toLowerCase().includes(text.toLowerCase()));
   }
-
 }

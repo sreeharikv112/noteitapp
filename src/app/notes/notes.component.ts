@@ -95,6 +95,7 @@ export class NotesComponent implements OnInit {
           if(index > -1){
             this.notebooks.splice(index, 1);
           }
+          this.getAllNotes();
         },
         err => {
           alert("An error occurred while adding new notebook");
