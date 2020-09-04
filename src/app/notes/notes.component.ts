@@ -14,6 +14,7 @@ export class NotesComponent implements OnInit {
   notebooks: Notebook[] = [];
   allNotes: Note[] = [];
   selectedNoteBook : Notebook;
+  searchText:string;
 
   constructor(private apiService:NetworkApiService) {
 

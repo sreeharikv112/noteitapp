@@ -11,6 +11,7 @@ import {Router, RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CustomnoteuiComponent } from './notes/customnoteui/customnoteui.component';
+import { NoteTextFilterPipePipe } from './shared/note-text-filter-pipe.pipe';
 
 const appRoutes : Routes = [
   {
@@ -39,7 +40,8 @@ const appRoutes : Routes = [
     FeedbackComponent,
     NotesComponent,
     NotFoundComponent,
-    CustomnoteuiComponent
+    CustomnoteuiComponent,
+    NoteTextFilterPipePipe
   ],
   imports: [
     BrowserModule,

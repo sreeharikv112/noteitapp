@@ -3,6 +3,7 @@
   <div class="row" style="margin-top: 12px;">
     <div class="col-md-8">
       <input type="text"
+             [(ngModel)]="searchText"
             class="form-control"
              style="width: 100%;"
              placeholder="Search notes...">
@@ -62,7 +63,10 @@
       <div class="row">
         <!--Note List-->
 
-        <app-customnoteui  *ngFor="let nte of allNotes" [note]="nte" (noteDeleted)="deleteNote($event)" (noteUpdated)="onNoteUpdated($event)"></app-customnoteui>
+        <app-customnoteui  *ngFor="let nte of allNotes | noteTextFilterPipe:searchText"
+                           [note]="nte"
+                           (noteDeleted)="deleteNote($event)"
+                           (noteUpdated)="onNoteUpdated($event)"></app-customnoteui>
 
       </div>
     </div>
